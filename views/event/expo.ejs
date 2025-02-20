@@ -3,6 +3,10 @@
     <style>
         .expo-container {
             background: linear-gradient(to right, #0F1E47, #000510);
+            padding-top: 6rem; /* Increased padding-top to accommodate navbar */
+            position: relative;
+            z-index: 0;
+            min-height: 100vh;
         }
 
         /* ...existing styles... */
@@ -91,7 +95,22 @@
         }
 
         .register-banner {
-            border-bottom: 1px solid rgba(255, 167, 0, 0.2);
+            width: 100%;
+            padding: 1rem;
+            position: fixed; /* Changed to fixed */
+            top: 4rem; /* Position it below navbar */
+            left: 0;
+            z-index: 100; /* Higher z-index to stay above content but below navbar */
+
+        }
+
+        .register-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
         }
 
         .project-card,
@@ -192,6 +211,14 @@
             .project-image,
             .product-header {
                 height: 200px;
+            }
+
+            .expo-container {
+                padding-top: 7rem; /* Increased padding for mobile */
+            }
+            
+            .register-banner {
+                top: 3.5rem; /* Adjust for mobile navbar height */
             }
         }
 
