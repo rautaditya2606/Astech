@@ -3,7 +3,8 @@
     <div class="register-banner">
         <div class="register-content">
             <span class="register-text">Register now for early access!</span>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaz34SJPCQf4CvZdxJC6Ol1Reqy30yipLQvf-XJjI2_s3hSg/viewform" class="register-button">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaz34SJPCQf4CvZdxJC6Ol1Reqy30yipLQvf-XJjI2_s3hSg/viewform"
+                class="register-button">
                 <i class="fas fa-ticket-alt"></i>
                 Register Here
             </a>
@@ -17,7 +18,8 @@
         <section class="ent-section">
             <div class="ent-card">
                 <div class="ent-image">
-                    <img src="https://www.pukkapartners.com/media/2021/4/ef5ccbd1-d83e-4e7a-93d9-1058e4fbc1ae.jpg" alt="AR-VR">
+                    <img src="https://www.pukkapartners.com/media/2021/4/ef5ccbd1-d83e-4e7a-93d9-1058e4fbc1ae.jpg"
+                        alt="AR-VR">
                     <div class="ent-overlay">
                         <span class="tech-badge">Virtual Reality</span>
                     </div>
@@ -42,7 +44,8 @@
         <section class="ent-section">
             <div class="ent-card reverse">
                 <div class="ent-image">
-                    <img src="https://starwalk.space/gallery/images/planetarium-day-2021/1920x1080.jpg  " alt="Planetarium">
+                    <img src="https://starwalk.space/gallery/images/planetarium-day-2021/1920x1080.jpg  "
+                        alt="Planetarium">
                     <div class="ent-overlay">
                         <span class="tech-badge">Astronomy</span>
                     </div>
@@ -93,7 +96,8 @@
         <section class="ent-section">
             <div class="ent-card reverse">
                 <div class="ent-image">
-                    <img src="https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603120_1280.jpg" alt="Gaming">
+                    <img src="https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603120_1280.jpg"
+                        alt="Gaming">
                     <div class="ent-overlay">
                         <span class="tech-badge">E-Sports</span>
                     </div>
@@ -118,7 +122,8 @@
         <section class="ent-section">
             <div class="ent-card">
                 <div class="ent-image">
-                    <img src="https://cdn.prod.website-files.com/64931d2aee18510b47f4bb1f/64ecfa1fad20286493de9568_r094aj5e10gjt9vzy87jjw7s3dq9xvy1.jpeg" alt="Food">
+                    <img src="https://cdn.prod.website-files.com/64931d2aee18510b47f4bb1f/64ecfa1fad20286493de9568_r094aj5e10gjt9vzy87jjw7s3dq9xvy1.jpeg"
+                        alt="Food">
                     <div class="ent-overlay">
                         <span class="tech-badge">Culinary</span>
                     </div>
@@ -144,7 +149,8 @@
         <section class="activity-section">
             <div class="activity-card">
                 <div class="activity-image">
-                    <img src="https://willempennings.nl/wp-content/uploads/2021/11/rocket-launch.png" alt="Water Rocket">
+                    <img src="https://willempennings.nl/wp-content/uploads/2021/11/rocket-launch.png"
+                        alt="Water Rocket">
                     <div class="activity-overlay">
                         <span class="activity-badge">Physics</span>
                     </div>
@@ -289,6 +295,12 @@
             .entertainment-container {
                 background: linear-gradient(135deg, var(--dark-purple), var(--pure-black));
                 padding: 4rem 2rem;
+                margin-top: 2rem;
+                /* Adjusted margin-top */
+                position: relative;
+                z-index: 0;
+                min-height: calc(100vh - 5rem);
+                /* Adjusted min-height */
             }
 
             .main-title {
@@ -350,16 +362,17 @@
             }
 
             .register-banner {
-                border-bottom: 1px solid rgba(255, 167, 0, 0.2);
-            }
-
-            .register-banner {
-                padding: 1rem;
-                margin-top: 2.3rem; 
-                text-align: center;
-                background: linear-gradient(45deg, #FFDD00, #FFAA00, #FF7800, #FF4500);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                width: 100%;
+                margin-top: 3rem;
+                position: fixed;
+                /* Changed to fixed */
+                top: 4rem;
+                /* Position right below navbar */
+                left: 0;
+                z-index: 999;
+                /* Just below navbar's z-index of 1000 */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                /* Added shadow for depth */
             }
 
             .register-content {
