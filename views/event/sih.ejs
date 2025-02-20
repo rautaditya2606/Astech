@@ -1,0 +1,239 @@
+<% layout("/layout/boilerplate") %>
+
+
+    <div class="event-header">
+        <h1>ASTECH in SIH Grand Finale 2024</h1>
+        <div class="event-meta">
+            <span><i class="fas fa-calendar"></i> December 11-15, 2024</span>
+            <span><i class="fas fa-clock"></i> 5 Days Event</span>
+            <span><i class="fas fa-users"></i> In collaboration with ACES and Crieya</span>
+        </div>
+    </div>
+
+
+    <div class="hero-image">
+        <img src="https://i.postimg.cc/FFPgs2wk/astechgrp2.jpg" alt="SIH Grand Finale 2024">
+    </div>
+
+    <div class="event-detail-container">
+
+        <div class="section-card">
+            <h2>Introduction</h2>
+            <p>The Hackathon Final at our college was a thrilling five-day event that brought together tech enthusiasts
+                from all walks of life to showcase their skills and creativity. As volunteers from the Astech Club, we
+                had the opportunity to be part of this exciting event and contribute in several key areas. The event,
+                which began on 11th December, required volunteers to work in shifts to ensure smooth operations and
+                provide continuous support to the participants in collaboration with ACES and Crieya.</p>
+        </div>
+
+        <div class="event-sections">
+            <div class="section-card">
+                <h3><i class="fas fa-tasks"></i> Our Role</h3>
+                <p>As ASTECH volunteers, we played crucial roles in:</p>
+                <ul>
+                    <li>Technical support and troubleshooting</li>
+                    <li>Coordinating between participants and mentors</li>
+                    <li>Managing event logistics and resources</li>
+                    <li>Ensuring smooth communication flow</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3><i class="fas fa-chart-line"></i> Impact & Learning</h3>
+                <p>The SIH Grand Finale provided us with invaluable experience in:</p>
+                <ul>
+                    <li>Large-scale event management</li>
+                    <li>Problem-solving under pressure</li>
+                    <li>Team coordination and leadership</li>
+                    <li>Exposure to innovative technologies</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3><i class="fas fa-users"></i> Participation Highlights</h3>
+                <ul>
+                    <li>Over 50 teams participated</li>
+                    <li>24/7 support provided throughout the event</li>
+                    <li>Multiple innovative solutions developed</li>
+                    <li>Successful collaboration with industry mentors</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="event-gallery">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <img src="/images/events/sih-1.jpg" alt="SIH Event Image 1" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <img src="/images/events/sih-2.jpg" alt="SIH Event Image 2" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .hero-image {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            position: relative;
+            aspect-ratio: 16/9;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+            display: block;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-image {
+                max-height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-image {
+                max-height: 300px;
+            }
+        }
+
+        .event-detail-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .event-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 167, 0, 0.05);
+            border-radius: 15px;
+        }
+
+        .event-header h1 {
+            color: #FFA700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .event-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            color: #FFA700;
+        }
+
+        .event-description {
+            background: rgba(255, 167, 0, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .event-description h2 {
+            color: #FFA700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .event-description p {
+            color: #FFA700;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .event-sections {
+            margin: 3rem 0;
+        }
+
+        .section-card {
+            background: rgba(255, 167, 0, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-card h3 {
+            color: #FFA700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-card p {
+            color: #FFA700;
+            margin-bottom: 1rem;
+        }
+
+        .section-card ul {
+            color: #FFA700;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .section-card ul li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .section-card ul li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #FFA700;
+        }
+
+        .event-gallery {
+            margin: 3rem 0;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .event-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .gallery-item {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>

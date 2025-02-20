@@ -1,0 +1,75 @@
+/* Global Responsive Rules */
+:root {
+    --container-padding: 1rem;
+}
+
+/* Base responsive container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Typography */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    h3 { font-size: 1.2rem !important; }
+    p { font-size: 0.9rem !important; }
+}
+
+/* Grid System */
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .grid { grid-template-columns: repeat(8, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .container { padding: 0 0.5rem; }
+}
+
+/* Flex Utilities */
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .flex-column-mobile {
+        flex-direction: column !important;
+    }
+}
+
+/* Image Responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+}
+
+/* Spacing Adjustments */
+@media (max-width: 768px) {
+    .section { padding: 2rem 0; }
+    .mt-mobile-2 { margin-top: 2rem; }
+    .mb-mobile-2 { margin-bottom: 2rem; }
+}

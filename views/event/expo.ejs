@@ -1,0 +1,333 @@
+<% layout('layout/boilerplate') %>
+
+    <style>
+        .expo-container {
+            background: linear-gradient(to right, #0F1E47, #000510);
+        }
+
+        /* ...existing styles... */
+
+        .main-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #FFDD00, #FFAA00, #FF7800, #FF4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+            /* Fallback color */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            /* Add depth */
+            position: relative;
+            /* Ensure proper stacking */
+            z-index: 1;
+            /* Ensure visibility */
+            padding: 1rem 0;
+            /* Add some spacing */
+        }
+
+        /* Add specific hover effect */
+        .main-title:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+        /* Improve visibility on mobile */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+                padding: 0.5rem 0;
+                margin-top: 3rem;
+            }
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: rgba(255, 167, 0, 0.1);
+            color: var(--accent-orange);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            /* Increased font size */
+            backdrop-filter: blur(5px);
+            border: 1px solid var(--accent-orange);
+            font-weight: 500;
+            /* Added font weight */
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            /* Added text shadow */
+        }
+
+        .project-card h2,
+        .product-card h2 {
+            color: var(--accent-orange);
+        }
+
+        .project-card:hover,
+        .product-card:hover {
+            border-color: var(--accent-orange);
+            box-shadow: 0 10px 30px rgba(255, 167, 0, 0.1);
+        }
+
+        .feature-list i {
+            color: var(--accent-orange);
+        }
+
+        .register-text,
+        .register-button {
+            color: var(--accent-orange);
+        }
+
+        .register-button {
+            border-color: var(--accent-orange);
+            background: rgba(255, 167, 0, 0.1);
+        }
+
+        .register-button:hover {
+            background: rgba(255, 167, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(255, 167, 0, 0.1);
+        }
+
+        .register-banner {
+            border-bottom: 1px solid rgba(255, 167, 0, 0.2);
+        }
+
+        .project-card,
+        .product-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .project-card:hover,
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-image,
+        .product-header {
+            position: relative;
+            /* Ensure this is set */
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .project-image img,
+        .product-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img,
+        .product-card:hover .product-header img {
+            transform: scale(1.05);
+        }
+
+        .projects-grid,
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .project-content,
+        .product-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .project-stats {
+            background: linear-gradient(45deg, #FFDD00, #FFAA00, #FF7800, #FF4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            /* Changed from top: 0 */
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            padding: 1.5rem;
+            z-index: 1;
+            /* Added z-index */
+        }
+
+        /* Added hover effect specifically for overlay */
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+
+            .projects-grid,
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .project-image,
+            .product-header {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .project-content h2,
+            .product-body h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+
+    <div class="register-banner">
+        <div class="register-content">
+            <span class="register-text">Book your spot at the Tech Expo!</span>
+            <a href="https://docs.google.com/forms/u/0/" class="register-button">
+                <i class="fas fa-ticket-alt"></i>
+                Register Now
+            </a>
+        </div>
+    </div>
+
+    <div class="expo-container">
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <h1 class="main-title">Projects</h1>
+            <div class="projects-grid">
+                <!-- BB84 Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://marsdd-public-files.s3.ca-central-1.amazonaws.com/wp-content/uploads/2022/06/06213953/stock_quantum-computer.jpg" alt="Quantum">
+                        <div class="project-overlay">
+                            <span class="tech-tag">Quantum Computing</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2>BB84 Quantum Key Distribution</h2>
+                        <p>A groundbreaking implementation of quantum cryptography protocol for secure communication
+                            using quantum mechanics principles.</p>
+                    </div>
+                </div>
+
+                <!-- Rocket Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://i.ibb.co/W4K5sFwf/image.png" alt="Rocket">
+                        <div class="project-overlay">
+                            <span class="tech-tag">Aeronautical</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2>NADAL</h2>
+                        <p>NADAL <b>(Next-Gen Aircraft for Dynamic Aerial Launch)</b> is an experimental rocket designed
+                            to test high-speed flight and propulsion efficiency, featuring a new propulsion system. </p>
+                    </div>
+                </div>
+
+                <!-- Li-Fi -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://transmitter.ieee.org/wp-content/uploads/diy/1f4f7.jpg" alt="Li-Fi">
+                        <div class="project-overlay">
+                            <span class="tech-tag">Communication</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2>Li-Fi (Light Fidelity) System</h2>
+                        <p>Next-generation wireless Data transfer using visible light, achieving high-speed data
+                            transmission.</p>
+                    </div>
+                </div>
+
+                <!-- Auto Billing -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://hackster.imgix.net/uploads/attachments/1394329/_blWwdS2RuX.blob?auto=compress&w=1600&h=1200&fit=min&fm=jpg" alt="Auto Billing">
+                        <div class="project-overlay">
+                            <span class="tech-tag">AI</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2>Smart Auto-Billing System</h2>
+                        <p>Our Auto-Billing system streamlines the check-out process, eliminating the need to wait in
+                            long lines.</p>
+                    </div>
+                </div>
+
+                <!-- Architecture Models -->
+                <div class="project-card">
+                    <div class="product-header">
+                        <img src="https://thefusioneer.com/wp-content/uploads/2023/11/Fibonacci-Sequence-supporting-image-scaled.jpeg"
+                            alt="Architecture Models">
+                            <div class="project-overlay">
+                                <span class="tech-tag">EcoMath</span>
+                            </div>
+                    </div>
+                    <div class="product-body">
+                        <h2>Maths in Nature</h2>
+                        <p>Explore the fascinating connection between math in nature and its practical applications in everyday life.</p>
+                    </div>
+                </div>
+
+                <!-- LHC Model -->
+
+            </div>
+        </section>
+        <br><br>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <h1 class="main-title">Product Exhibition</h1>
+            <div class="products-grid">
+                <!-- Drone Product -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f" alt="Drone">
+                        <div class="project-overlay">
+                            <span class="tech-tag">Robotics</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2>Drone Exhibition</h2>
+                        <p>Advanced drone technology showcasing various applications from agriculture to surveillance.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Agricultural Drones</li>
+                            <li><i class="fas fa-check-circle"></i> Surveillance Systems</li>
+                            <li><i class="fas fa-check-circle"></i> Delivery Solutions</li>
+                            <li><i class="fas fa-check-circle"></i> Racing Drones</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Vertical Farming -->
+
+
+
+            </div>
+        </section>
+    </div>

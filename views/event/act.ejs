@@ -1,0 +1,224 @@
+<% layout('layout/boilerplate') %>
+
+    <style>
+
+        .patent-container {
+            margin-bottom: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .patent-hero {
+            background: linear-gradient(45deg, #FFDD00, #FFAA00, #FF7800, #FF4500);
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            border-radius: 0 0 50% 50%/0 0 100px 100px;
+        }
+
+        .service-box {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card {
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: scale(1.02);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: #FF7800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            background: black color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            border: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(45deg, #FFDD00, #FFAA00, #FF7800, #FF4500);
+            transform: scale(1.05);
+        }
+
+        .modal-content {
+            border-radius: 15px;
+        }
+
+        .fas fa-certificate me-2 text {
+            color: #FF7800;
+        }
+
+        .patent-footer-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/patent-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-top: 4rem;
+            padding: 6rem 0;
+        }
+
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #FFAA00;
+            margin-bottom: 1rem;
+        }
+    </style>
+
+    <div class="patent-container">
+        <!-- Hero Section -->
+        <div class="patent-hero text-center">
+            <div class="container">
+                <h1 class="display-4 mb-3">Innovate & Protect Your Ideas</h1>
+                <p class="lead mb-4">Get expert guidance on patent registration with our personalized consultation
+                    service
+                </p>
+                <form action="https://docs.google.com/forms/u/0/">
+                    <button class="cta-button" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                        <i class="fas fa-rocket me-2"></i>Start Your Patent Journey
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="patent-section container my-5">
+            <h1 class="text-center mb-4">Patent Registration Services</h1>
+
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <h2 class="mb-4">
+                        <i class="fas fa-certificate me-2" style="color:#FF7800;"></i>What is a Patent?
+                    </h2>
+
+                    <div class="benefit-card">
+                        <p class="lead">A patent is an exclusive right granted for an invention - a product or process
+                            that
+                            provides a new way of doing something or offers a new technical solution to a problem.</p>
+                    </div>
+
+                    <h3 class="mt-4 mb-3">Benefits of Patent Registration</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="benefit-card">
+                                <i class="fas fa-shield-alt feature-icon"></i>
+                                <h4>Legal Protection</h4>
+                                <p>Exclusive rights to your invention</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="benefit-card">
+                                <i class="fas fa-coins feature-icon"></i>
+                                <h4>Monetization</h4>
+                                <p>Revenue through licensing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="service-box p-4">
+                        <h2 class="mb-4">
+                            <i class="fas fa-handshake me-2" style="color:#FF7800;"></i>Our Services
+                        </h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="benefit-card text-center">
+                                    <i class="fas fa-users feature-icon"></i>
+                                    <h4>1:1 Consultation</h4>
+                                    <p>Personal guidance from experts</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="benefit-card text-center">
+                                    <i class="fas fa-file-alt feature-icon"></i>
+                                    <h4>Documentation</h4>
+                                    <p>Complete assistance</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cta-section text-center mt-4">
+                            <h3>Ready to Secure Your Innovation?</h3>
+                            <form action="https://docs.google.com/forms/u/0/">
+                                <button class="cta-button mt-3" data-bs-toggle="modal"
+                                    data-bs-target="#appointmentModal">
+                                    <i class="fas fa-calendar-check me-2"></i>Schedule Free Consultation
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="patent-footer-banner">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4">Our Impact in Numbers</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="achievement-card">
+                        <div class="stat-number">500+</div>
+                        <h3>Patents Filed</h3>
+                        <p>Successfully processed and filed</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="achievement-card">
+                        <div class="stat-number">95%</div>
+                        <h3>Success Rate</h3>
+                        <p>Patent approval ratio</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="achievement-card">
+                        <div class="stat-number">1000+</div>
+                        <h3>Consultations</h3>
+                        <p>Free consultations provided</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="achievement-card">
+                        <div class="stat-number">50+</div>
+                        <h3>Expert Officers</h3>
+                        <p>Dedicated patent officers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

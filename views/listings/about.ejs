@@ -1,0 +1,380 @@
+<% layout('layout/boilerplate') %>
+
+    <div class="hero-section">
+        <div class="hero-container">
+            <h1 class="animate-fade-down">ASTECH</h1>
+            <h2 class="animate-fade-up">"Where science meets technology to shape a brighter future."</h2>
+            <div class="club-info animate-fade">
+                <p>Student Club's Name: Astech Club</p>
+                <p>Year of Formation: November, 2023</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-aim-container">
+        <div class="aim-section">
+            <h2 class="section-title">Our Aim</h2>
+            <div class="content-card">
+                <p>
+                    The Astech Club is all about turning curiosity into innovation. We aim to bring
+                    students together who are passionate about science and technology and provide them
+                    with a space to learn, explore, and create. Whether it's applying scientific concepts
+                    to solve real-world problems or using technology to build something impactful,
+                    Astech is here to guide and support you every step of the way.
+                </p>
+            </div>
+        </div>
+
+        <div class="objectives-section">
+            <h2 class="section-title">Our Objectives</h2>
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>To spark creativity by merging science and technology to solve everyday challenges.</p>
+                </div>
+                <div class="objective-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Connection</h3>
+                    <p>To connect students with experts through workshops, talks, and interactive sessions.</p>
+                </div>
+                <div class="objective-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Collaboration</h3>
+                    <p>To build a collaborative community where ideas flow freely and teamwork thrives.</p>
+                </div>
+                <div class="objective-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Growth</h3>
+                    <p>To encourage competition and growth through events and showcases.</p>
+                </div>
+                <div class="objective-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Practical Learning</h3>
+                    <p>To provide hands-on project opportunities that enhance skills and boost confidence.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card">
+                        <div class="counter" data-target="120">0</div>
+                        <h4>Members</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card">
+                        <div class="counter" data-target="3">0</div>
+                        <h4>Events</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card">
+                        <div class="counter" data-target="10">0</div>
+                        <h4>Projects</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card">
+                        <div class="counter" data-target="15">0</div>
+                        <h4>Awards</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="gallery-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Gallery</h2>
+            <div class="row g-3">
+                <div class="col-md-4 col-6">
+                    <img src="/images/gallery/image1.jpg" class="img-fluid gallery-img" alt="Club Activity 1">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="/images/gallery/image2.jpg" class="img-fluid gallery-img" alt="Club Activity 2">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="/images/gallery/image3.jpg" class="img-fluid gallery-img" alt="Club Activity 3">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="/images/gallery/image4.jpg" class="img-fluid gallery-img" alt="Club Activity 4">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="/images/gallery/image5.jpg" class="img-fluid gallery-img" alt="Club Activity 5">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="/images/gallery/image6.jpg" class="img-fluid gallery-img" alt="Club Activity 6">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <style>
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            position: relative;
+            aspect-ratio: 16/9;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-section {
+            padding: 8rem 2rem;
+            position: relative;
+            overflow: hidden;
+            background-attachment: fixed;
+            background-image: url('https://images.unsplash.com/photo-1486291301608-a503c774721a?q=80&w=2005&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-container h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #FFA700, #FFB700, #FFDD00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .club-info {
+            margin-top: 2rem;
+            color: #FFA700;
+            font-size: 1.2rem;
+        }
+
+        .main-aim-container {
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #FFA700, #FFB700, #FFDD00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .content-card {
+            background: rgba(255, 167, 0, 0.05);
+            border: 1px solid rgba(255, 167, 0, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .content-card p {
+            color: #FFA700;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem auto;
+            max-width: 1200px;
+        }
+
+        .objective-card {
+            background: rgba(255, 167, 0, 0.05);
+            border: 1px solid rgba(255, 167, 0, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .objective-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 167, 0, 0.1);
+        }
+
+        .objective-card i {
+            font-size: 2.5rem;
+            color: #FFA700;
+            margin-bottom: 1rem;
+        }
+
+        .objective-card h3 {
+            color: #FFA700;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .objective-card p {
+            color: #FFA700;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .stats-section {
+            background: rgba(255, 167, 0, 0.05);
+            padding: 4rem 0;
+        }
+
+        .stat-card {
+            padding: 2rem;
+            border-radius: 10px;
+            background: rgba(255, 167, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FFA700;
+            margin-bottom: 1rem;
+        }
+
+        .stat-card h4 {
+            color: #FFA700;
+            font-size: 1.2rem;
+        }
+
+        .team-card {
+            background: rgba(255, 167, 0, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-img img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-info h4 {
+            color: #FFA700;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-info p {
+            color: #FFA700;
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        .animate-fade-down {
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: fadeDown 1s ease forwards;
+        }
+
+        .animate-fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s ease 0.3s forwards;
+        }
+
+        .animate-fade {
+            opacity: 0;
+            animation: fade 1s ease 0.6s forwards;
+        }
+
+        @keyframes fadeDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fade {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-container h1 {
+                font-size: 3rem;
+            }
+
+            .objectives-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script>
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const step = target / (duration / 16); // 60fps
+
+            function updateCounter() {
+                const current = parseInt(counter.innerText);
+                if (current < target) {
+                    counter.innerText = Math.ceil(current + step);
+                    setTimeout(updateCounter, 16);
+                } else {
+                    counter.innerText = target;
+                }
+            }
+
+            updateCounter();
+        });
+    </script>

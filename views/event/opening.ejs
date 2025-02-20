@@ -1,0 +1,304 @@
+<% layout("/layout/boilerplate") %>
+
+<div class="hero-image">
+    <img src="https://i.postimg.cc/8PX1rPc2/opening.png" alt="ASTECH Festival Opening Ceremony">
+</div>
+
+<div class="event-detail-container">
+    <div class="event-header">
+        <h1>ASTECH Festival</h1>
+        <div class="event-meta">
+            <span><i class="fas fa-calendar"></i> November 2024</span>
+            <span><i class="fas fa-clock"></i> 12:45 PM - 4:00 PM</span>
+            <span><i class="fas fa-users"></i> 300 Participants</span>
+            <span><i class="fas fa-map-marker-alt"></i> SOC, SOE level</span>
+        </div>
+    </div>
+
+    <div class="event-objective">
+        <h2>Event Objective</h2>
+        <p>The ASTECH Festival is the flagship event to introduce the club to first-year students, emphasizing that it is for the first year, by the first year.</p>
+        <div class="objectives-list">
+            <div class="objective-item">
+                <i class="fas fa-bullseye"></i>
+                <p>Showcase the club's purpose and vision</p>
+            </div>
+            <div class="objective-item">
+                <i class="fas fa-users"></i>
+                <p>Engage and inspire first-year students to actively participate</p>
+            </div>
+            <div class="objective-item">
+                <i class="fas fa-star"></i>
+                <p>Establish recognition for ASTECH as a hub for innovation and collaboration</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="event-timeline">
+        <h2>Opening Ceremony Schedule</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Welcome Ceremony</h3>
+                    <p>A warm and vibrant opening ceremony to set the tone for the event</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Icebreaker Activity</h3>
+                    <p>An engaging session to energize the audience and foster interaction among participants</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Escorting and Felicitation</h3>
+                    <p>Honoring our esteemed guests with tokens of appreciation</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Samai Lighting and Saraswati Pooja</h3>
+                    <p>Traditional beginning seeking blessings for knowledge and wisdom</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hero-image {
+        width: 100%;
+        height: auto; /* Changed from fixed height */
+        max-height: 600px; /* Added max-height */
+        overflow: hidden;
+        margin-bottom: 2rem;
+        position: relative;
+        aspect-ratio: 16/9; /* Added aspect ratio */
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease;
+        display: block; /* Added to remove unwanted space */
+    }
+
+    /* Added media queries for better responsiveness */
+    @media (max-width: 768px) {
+        .hero-image {
+            max-height: 400px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-image {
+            max-height: 300px;
+        }
+    }
+
+    .event-detail-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .event-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: rgba(255, 167, 0, 0.05);
+        border-radius: 15px;
+    }
+
+    .event-header h1 {
+        color: #FFA700;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .event-meta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .event-meta span {
+        color: #FFA700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .event-objective {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: rgba(255, 167, 0, 0.05);
+        border-radius: 15px;
+    }
+
+    .event-objective h2 {
+        color: #FFA700;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .objectives-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .objective-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: rgba(255, 167, 0, 0.1);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .objective-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .objective-item i {
+        color: #FFA700;
+        font-size: 1.5rem;
+    }
+
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 2rem auto;
+    }
+
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background: #FFA700;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        padding: 1rem 2rem;
+        position: relative;
+        width: 50%;
+        animation: slideIn 0.5s ease-out forwards;
+        opacity: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 50%;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+        background: rgba(255, 167, 0, 0.05);
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .timeline-content h3 {
+        color: #FFA700;
+        margin-bottom: 0.5rem;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .timeline::after {
+            left: 31px;
+        }
+
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 0;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .event-detail-container {
+            padding: 0 1.5rem;
+        }
+        
+        .objectives-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .event-meta {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .objectives-list {
+            grid-template-columns: 1fr;
+        }
+
+        .timeline::after {
+            left: 0;
+        }
+
+        .timeline-item {
+            width: 100%;
+            padding-left: 2rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .event-header h1 {
+            font-size: 1.8rem;
+        }
+
+        .event-objective {
+            padding: 1rem;
+        }
+
+        .timeline-content {
+            padding: 0.8rem;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = `slideIn 0.5s ease-out ${index * 0.2}s forwards`;
+                }
+            });
+        }, { threshold: 0.1 });
+
+        timelineItems.forEach(item => observer.observe(item));
+    });
+</script>
+

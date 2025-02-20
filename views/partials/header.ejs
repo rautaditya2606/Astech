@@ -1,0 +1,19 @@
+<header class="navbar">
+    <div class="nav-content">
+        <!-- ...existing code... -->
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <!-- ...existing code... -->
+    </div>
+</header>
+
+<script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    });
+</script>
