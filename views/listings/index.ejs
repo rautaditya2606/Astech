@@ -86,7 +86,7 @@
         }
 
         .logo img {
-            height: 5rem;
+            height: 40px;
             /* Reduced logo size */
             filter: drop-shadow(0 5px 15px #d5dfe9);
             /* Reduced shadow */
@@ -734,6 +734,41 @@
                 font-size: 6rem; /* Still larger than original but adjusted for very small screens */
             }
         }
+
+        /* Contact Link Styles */
+        .contact-link {
+            color: #FFA700 !important;
+            margin-top: 1rem;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid #FFA700;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .contact-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #FFA700;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .contact-link:hover {
+            color: #000000 !important;
+        }
+
+        .contact-link:hover::before {
+            left: 0;
+        }
     </style>
 </head>
 
@@ -743,7 +778,7 @@
         <div class="nav-content">
             <div style="display: flex; align-items: center;">
                 <div class="logo">
-                    <img src="https://i.postimg.cc/5NdykQt1/newlogo-removebg.png" alt="Logo">
+                    <img src="https://i.postimg.cc/PJn2jcxF/logo.png" alt="Logo">
                 </div>
                 <div class="brand-name" style="text-align: center;">ASTECH</div>
             </div>
@@ -756,6 +791,7 @@
                 <a href="/about">About</a>
                 <a href="/event">Events</a>
                 <a href="/member">Team</a>
+                <a href="/contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -789,9 +825,9 @@
             <div class="slideshow-container">
                 <div class="slides fade">
                     <img src="https://i.postimg.cc/Lsz39hMm/astecgrp1.jpg" alt="Slide 1">
-                </div>
-                <div class="slides fade">
-                    <img src="https://i.postimg.cc/FFPgs2wk/astechgrp2.jpg" alt="Slide 2">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://i.postimg.cc/FFPgs2wk/astechgrp2.jpg" alt="Slide 2">
                 </div>
                 <div class="slides fade">
                     <img src="https://i.postimg.cc/s2w14RYp/astechgrp3.jpg" alt="Slide 3">
@@ -824,13 +860,14 @@
                 <a href="https://www.instagram.com/astech_mitadt" class="social-link"><i
                         class="fab fa-instagram"></i></a>
             </div>
+            <div class="footer-contact">
+                <a href="/contact" class="contact-link">Contact Us</a>
+            </div>
         </div>
-        
     </footer>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </body>
-
 
 
 <script>
