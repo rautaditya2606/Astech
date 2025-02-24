@@ -9,6 +9,9 @@
                     class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/astech_mitadt" class="social-link"><i class="fab fa-instagram"></i></a>
         </div>
+        <div class="footer-contact">
+            <a href="/contact" class="contact-link">Contact Us</a>
+        </div>
     </div>
 </footer>
 
@@ -69,6 +72,40 @@
         .footer-bottom {
             color: #888;
             font-size: 1rem;
+        }
+
+        .contact-link {
+            color: #FFA700 !important;
+            margin-top: 1rem;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid #FFA700;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .contact-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #FFA700;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .contact-link:hover {
+            color: #000000 !important;
+        }
+
+        .contact-link:hover::before {
+            left: 0;
         }
 
         @media (max-width: 768px) {
