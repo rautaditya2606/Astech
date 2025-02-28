@@ -19,10 +19,12 @@
         }
 
         .event-image {
-            flex: 0 0 40%;  /* Changed from fixed 400px to relative 40% */
+            flex: 0 0 40%;
+            /* Changed from fixed 400px to relative 40% */
             position: relative;
             overflow: hidden;
-            min-height: 300px;  /* Added minimum height */
+            min-height: 300px;
+            /* Added minimum height */
             background: rgba(0, 0, 0, 0.2);
         }
 
@@ -103,7 +105,8 @@
         }
 
         .register-banner {
-            margin-top: 80px; /* Add margin to prevent navbar overlap */
+            margin-top: 80px;
+            /* Add margin to prevent navbar overlap */
             padding: 1rem;
             text-align: center;
             background: linear-gradient(45deg, #FFDD00, #FFAA00, #FF7800, #FF4500);
@@ -140,7 +143,8 @@
             }
 
             .register-banner {
-                margin-top: 60px; /* Adjust margin for mobile screens */
+                margin-top: 60px;
+                /* Adjust margin for mobile screens */
             }
         }
 
@@ -155,7 +159,31 @@
 
         <div class="events-container">
             <!-- Upcoming Events -->
-            <h2 class="category-title">Ongoing Events</h2>
+            <h2 class="category-title">Upcoming Events</h2>
+
+            <div class="event-item">
+                <div class="event-image" style="background: linear-gradient(45deg, rgba(255,167,0,0.1), rgba(255,167,0,0.2));">
+                    <i class="fas fa-bell" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 5rem; color: #FFA700;"></i>
+                </div>
+                <div class="event-details" style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="event-type type-upcoming">Coming Soon</span>
+                    <h3 class="event-title" style="margin: 1rem 0;"><b>Stay Updated!</b></h3>
+                    <p class="event-description">
+                        Don't miss out on our upcoming events! Follow us on social media and join our community to stay informed about the latest activities, workshops, and competitions.
+                    </p>
+                    <div class="event-info" style="margin-top: 1rem;">
+                        <a href="https://www.instagram.com/astech_mitadt/" target="_blank" style="text-decoration: none;">
+                            <div class="info-item">
+                                <i class="fab fa-instagram"></i>
+                                <span>Follow @astech_mitadt</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Events -->
+            <h2 class="category-title">Past Events</h2>
 
             <a href="/upcomingEvent" style="text-decoration: none; color: inherit;">
                 <div class="event-item">
@@ -165,8 +193,7 @@
                     </div>
                     <div class="event-details">
                         <div class="div" style="display: flex; ">
-                            <span class="event-type type-upcoming">Upcoming</span>
-                            <span class="event-type type-upcoming" style="margin-left:1rem;">Registration Live</span>
+                            <span class="event-type type-upcoming">Past</span>
                         </div>
                         <div class="event-date">27 - 28 Feb</div>
                         <h3 class="event-title"><b>SciFest'25</b></h3>
@@ -186,9 +213,6 @@
                     </div>
                 </div>
             </a>
-
-            <!-- Past Events -->
-            <h2 class="category-title">Past Events</h2>
 
             <a href="/opening" style="text-decoration: none; color: inherit;">
                 <div class="event-item">
@@ -216,7 +240,7 @@
                     </div>
                     <div class="event-details">
                         <span class="event-type type-upcoming">Past</span>
-                        <div class="event-date">11-13 Dec'24</div>
+                        <div class="event-date">Nov'24</div>
                         <h3 class="event-title"><b>Smart India Hackathon</b></h3>
                         <p class="event-description">The Hackathon Final at our college was a five-day tech event where
                             Astech Club volunteers ensured smooth operations and supported participants alongside ACES
