@@ -19,17 +19,17 @@
             position: relative;
             overflow: hidden;
         }
-    
+
         .logo-container {
             filter: drop-shadow(0 5px 15px #d5dfe9);
         }
-    
+
         .team-logo {
             width: 19rem;
             height: auto;
             animation: logoFloat 3s ease-in-out infinite;
         }
-    
+
         .header-decoration {
             position: absolute;
             bottom: 0;
@@ -38,7 +38,7 @@
             height: 4px;
             background: linear-gradient(90deg, transparent, #FFA700, transparent);
         }
-    
+
         .main-title {
             font-size: 3.5rem;
             margin-bottom: 1rem;
@@ -49,7 +49,7 @@
             font-weight: 700;
             letter-spacing: 2px;
         }
-    
+
         .subtitle {
             color: #FFA700;
             font-size: 1.2rem;
@@ -57,12 +57,12 @@
             letter-spacing: 1px;
             margin-bottom: 2rem;
         }
-    
+
         .team-section {
             background: linear-gradient(to right, #0F1E47, #000510);
             padding: 4rem 0;
         }
-    
+
         .event-title {
             font-size: 2.2rem;
             font-weight: 600;
@@ -76,7 +76,7 @@
             justify-content: center;
             gap: 1rem;
         }
-    
+
         .event-title::before,
         .event-title::after {
             content: '';
@@ -84,11 +84,11 @@
             width: 50px;
             background: linear-gradient(90deg, transparent, #FFA700);
         }
-    
+
         .event-title::after {
             background: linear-gradient(90deg, #FFA700, transparent);
         }
-    
+
         .cards-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -98,7 +98,7 @@
             gap: 2.5rem;
             padding: 2rem;
         }
-    
+
         .member-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 167, 0, 0.1);
@@ -109,12 +109,13 @@
             backdrop-filter: blur(10px);
             flex: 1 1 280px;
             max-width: 280px;
-            height: 400px; /* Fixed height for all cards */
+            height: 400px;
+            /* Fixed height for all cards */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-    
+
         /* Cool Hover Effect */
         .member-card:hover {
             transform: translateY(-10px);
@@ -123,22 +124,24 @@
             background: rgba(255, 255, 255, 0.05);
             animation: cardHover 0.5s ease-in-out forwards;
         }
-    
+
         @keyframes cardHover {
             0% {
                 transform: translateY(0);
                 box-shadow: 0 5px 15px rgba(255, 167, 0, 0.1);
             }
+
             50% {
                 transform: translateY(-10px) scale(1.05);
                 box-shadow: 0 15px 30px rgba(255, 167, 0, 0.3);
             }
+
             100% {
                 transform: translateY(-5px) scale(1.02);
                 box-shadow: 0 10px 25px rgba(255, 167, 0, 0.25);
             }
         }
-    
+
         .member-info {
             padding-top: 2.5rem;
             text-align: center;
@@ -149,14 +152,14 @@
             justify-content: center;
         }
 
-    
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1rem;
             margin-top: 1.2rem;
         }
-    
+
         .social-links a {
             color: #FFA700;
             font-size: 1.3rem;
@@ -169,14 +172,14 @@
             background: rgba(255, 167, 0, 0.1);
             transition: all 0.3s ease;
         }
-    
+
         .social-links a:hover {
             background: #FFA700;
             color: #000510;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(255, 167, 0, 0.2);
         }
-    
+
         .member-name {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
@@ -184,45 +187,49 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
-    
+
         .member-card:hover .member-name {
             transform: scale(1.05);
             text-shadow: 0 0 10px rgba(255, 167, 0, 0.3);
         }
-    
+
         @keyframes logoFloat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-10px);
             }
         }
-    
+
         @keyframes titleGlow {
             0% {
                 text-shadow: 0 0 10px rgba(255, 167, 0, 0.2);
             }
+
             100% {
                 text-shadow: 0 0 20px rgba(255, 167, 0, 0.4);
             }
         }
-    
+
         @media (max-width: 768px) {
             .main-title {
                 font-size: 2.5rem;
             }
-    
+
             .cards-container {
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 padding: 1rem;
             }
-    
+
             .event-title {
                 font-size: 1.8rem;
             }
         }
-    
+
         /* Enhanced mobile responsiveness for cards */
         @media (max-width: 768px) {
             .cards-container {
@@ -230,40 +237,40 @@
                 padding: 1rem;
                 gap: 2rem;
             }
-    
+
             .member-card {
                 width: 100%;
                 max-width: 340px;
                 height: 100px;
             }
-    
+
             .member-info {
                 padding: 1.5rem;
                 height: auto;
                 min-height: 160px;
             }
-    
+
             .member-name {
                 font-size: 1.3rem;
             }
-    
+
             .member-role {
                 font-size: 1rem;
                 margin-bottom: 1rem;
             }
 
-            
-    
+
+
             .social-links {
                 margin-top: 1rem;
             }
-    
+
             .social-links a {
                 font-size: 1.2rem;
                 padding: 8px 16px;
             }
         }
-    
+
         /* Extra small devices */
         @media (max-width: 480px) {
             .member-card {
@@ -272,28 +279,28 @@
                 height: 100%;
             }
         }
-    
+
         /* Custom Scrollbar Styles */
         ::-webkit-scrollbar {
             width: 10px;
             height: 10px;
         }
-    
+
         ::-webkit-scrollbar-track {
             background: rgba(15, 30, 71, 0.95);
             border-radius: 10px;
         }
-    
+
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(45deg, #FFA700, #FFB700);
             border-radius: 10px;
             border: 2px solid rgba(15, 30, 71, 0.95);
         }
-    
+
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(45deg, #FFB700, #FFDD00);
         }
-    
+
         /* For Firefox */
         * {
             scrollbar-width: thin;
@@ -309,7 +316,8 @@
             <div class="cards-container">
                 <div class="member-card">
                     <div class="image-container">
-                        <img src="https://i.postimg.cc/tT6fF89q/1000060997-removebg-preview.png" alt="Dr. Harshvardhan Bhatkar" class="member-image">
+                        <img src="https://i.postimg.cc/tT6fF89q/1000060997-removebg-preview.png"
+                            alt="Dr. Harshvardhan Bhatkar" class="member-image">
                     </div>
                     <div class="member-info">
                         <div>
@@ -324,7 +332,8 @@
                 </div>
                 <div class="member-card">
                     <div class="image-container">
-                        <img src="https://i.postimg.cc/QN1G7KMQ/1000060991-removebg-preview.png" alt="Dr. Pramod Ghatage" class="member-image">
+                        <img src="https://i.postimg.cc/QN1G7KMQ/1000060991-removebg-preview.png"
+                            alt="Dr. Pramod Ghatage" class="member-image">
                     </div>
                     <div class="member-info">
                         <div>
@@ -343,7 +352,9 @@
         <!-- Core Members Section -->
         <div class="role-section">
             <h2 class="event-title" style="text-align: center;">Core Members</h2>
-            <div class="cards-container">
+
+            <!-- First Row: President and Vice President -->
+            <div class="cards-container" style="margin-bottom: 2.5rem;">
                 <div class="member-card">
                     <div class="image-container">
                         <img src="/api/placeholder/200/200" alt="" class="member-image">
@@ -354,7 +365,6 @@
                             <div class="member-role">President</div>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-linkedin"></i></a>
-
                             </div>
                         </div>
                     </div>
@@ -370,28 +380,14 @@
                             <div class="member-role">Vice-President</div>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-linkedin"></i></a>
-
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="member-card">
-                    <div class="image-container">
-                        <img src="https://i.postimg.cc/9fjGgShg/ishita.jpg" alt="" class="member-image">
-                    </div>
-                    <div class="member-info">
-                        <div>
-                            <h3 class="member-name">Ishita Mandle</h3>
-                            <div class="member-role">Vice-President</div>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <!-- Second Row: Treasurer and General Secretary -->
+            <div class="cards-container">
                 <div class="member-card">
                     <div class="image-container">
                         <img src="https://i.postimg.cc/JnSJJdPQ/vishwajeetsingh.jpg" alt="" class="member-image">
@@ -402,7 +398,6 @@
                             <div class="member-role">Treasurer</div>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-linkedin"></i></a>
-
                             </div>
                         </div>
                     </div>
@@ -415,7 +410,51 @@
                     <div class="member-info">
                         <div>
                             <h3 class="member-name">Shivam Jani</h3>
-                            <div class="member-role">Secretary </div>
+                            <div class="member-role">General Secretary</div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="role-section">
+            <h2 class="event-title" style="text-align: center;">Discipline Committee</h2>
+            <div class="cards-container">
+                <div class="member-card">
+                    <div class="image-container">
+                        <img src="" alt="" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div>
+                            <h3 class="member-name">Vikrant Satav</h3>
+                            <div class="member-role">Discipline Committee</div>
+                            <div class="social-links">
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Members Section -->
+        <div class="role-section">
+            <h2 class="event-title" style="text-align: center;">Design</h2>
+            <div class="cards-container">
+                <div class="member-card">
+                    <div class="image-container">
+                        <img src="https://i.postimg.cc/ncp5Qdgx/1000061004-removebg-preview.png" alt=""
+                            class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div>
+                            <h3 class="member-name">Reva Raspaile</h3>
+                            <div class="member-role">Design Lead</div>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-linkedin"></i></a>
 
@@ -423,20 +462,31 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Members Section -->
-            <div class="role-section">
-                <h2 class="event-title" style="text-align: center;">Design</h2>
-                <div class="cards-container">
-                    <div class="member-card">
+                <!-- <div class="member-card">
                         <div class="image-container">
-                            <img src="https://i.postimg.cc/ncp5Qdgx/1000061004-removebg-preview.png" alt="" class="member-image">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
                         </div>
                         <div class="member-info">
                             <div>
-                                <h3 class="member-name">Reva Raspaile</h3>
-                                <div class="member-role">Design Lead</div>
+                                <h3 class="member-name">Anusha Choudhary </h3>
+                                <div class="member-role">Design Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Shivam Singh</h3>
+                                <div class="member-role">Design Member</div>
                                 <div class="social-links">
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
 
@@ -445,84 +495,68 @@
                         </div>
                     </div>
 
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Anusha Choudhary </h3>
-                                    <div class="member-role">Design Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Shivam Singh</h3>
-                                    <div class="member-role">Design Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="https://i.postimg.cc/28DzccYV/PHOTO.png" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">SUDHANSHU RANJAN</h3>
-                                    <div class="member-role">Design Member</div>
-                                    <div class="social-links">
-                                        <a href="https://www.linkedin.com/in/sudhanshu-jha-6132aa329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Shwetaki Killedar </h3>
-                                    <div class="member-role">Design Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                </div>
-            </div>
-            <!-- a -->
-
-            <div class="role-section">
-                <h2 class="event-title" style="text-align: center;">Management</h2>
-                <div class="cards-container">
                     <div class="member-card">
                         <div class="image-container">
-                            <img src="https://i.postimg.cc/Fsk05QRJ/aaryan.avif" alt="" class="member-image">
+                            <img src="https://i.postimg.cc/28DzccYV/PHOTO.png" alt="" class="member-image">
                         </div>
                         <div class="member-info">
                             <div>
-                                <h3 class="member-name">Aaryan Bhosale </h3>
-                                <div class="member-role">Management Lead</div>
+                                <h3 class="member-name">SUDHANSHU RANJAN</h3>
+                                <div class="member-role">Design Member</div>
+                                <div class="social-links">
+                                    <a href="https://www.linkedin.com/in/sudhanshu-jha-6132aa329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Shwetaki Killedar </h3>
+                                <div class="member-role">Design Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+        <!-- a -->
+
+        <div class="role-section">
+            <h2 class="event-title" style="text-align: center;">Management</h2>
+            <div class="cards-container">
+                <div class="member-card">
+                    <div class="image-container">
+                        <img src="https://i.postimg.cc/Fsk05QRJ/aaryan.avif" alt="" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div>
+                            <h3 class="member-name">Aaryan Bhosale </h3>
+                            <div class="member-role">Management Lead</div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Krishna magar </h3>
+                                <div class="member-role">Management Member</div>
                                 <div class="social-links">
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
 
@@ -531,217 +565,14 @@
                         </div>
                     </div>
 
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Krishna magar </h3>
-                                    <div class="member-role">Management Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Harshad Dhotre </h3>
-                                    <div class="member-role">Management Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Samarth Kedar</h3>
-                                    <div class="member-role">Management Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Soham gandhi </h3>
-                                    <div class="member-role">Management Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Arjun Deshmukh </h3>
-                                    <div class="member-role">Management Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Nandini khanwani</h3>
-                                    <div class="member-role">Management Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Satyam Sanjay karle</h3>
-                                    <div class="member-role">Management Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Saidhanti Mendhe </h3>
-                                    <div class="member-role">Management Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Siddhi Gawali </h3>
-                                    <div class="member-role">Management Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                </div>
-            </div>
-            <!-- a -->
-
-            <div class="role-section">
-                <h2 class="event-title" style="text-align: center;">Promotion </h2>
-                <div class="cards-container">
                     <div class="member-card">
                         <div class="image-container">
-                            <img src="https://i.postimg.cc/kGdTHF3B/1000061277-removebg-preview.png" alt="" class="member-image">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
                         </div>
                         <div class="member-info">
                             <div>
-                                <h3 class="member-name">Sanskriti Khamkar</h3>
-                                <div class="member-role">Promotion Lead</div>
-                                <div class="social-links">
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Ayana Srivastava </h3>
-                                    <div class="member-role">Promotion Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Abhinav Kumar</h3>
-                                    <div class="member-role">Promotion Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                </div>
-            </div>
-            <!-- a -->
-
-            <div class="role-section">
-                <h2 class="event-title" style="text-align: center;">Science</h2>
-                <div class="cards-container">
-                    <div class="member-card">
-                        <div class="image-container">
-                            <img src="https://i.postimg.cc/wjYy9mG7/aryanmishra.jpg" alt="" class="member-image">
-                        </div>
-                        <div class="member-info">
-                            <div>
-                                <h3 class="member-name">Aryan Mishra</h3>
-                                <div class="member-role">Science Lead</div>
+                                <h3 class="member-name">Harshad Dhotre </h3>
+                                <div class="member-role">Management Member</div>
                                 <div class="social-links">
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
 
@@ -750,144 +581,14 @@
                         </div>
                     </div>
 
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Rishav Pandey</h3>
-                                    <div class="member-role">Science Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Sarthak Choudhari </h3>
-                                    <div class="member-role">Science Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Shreyash Homkar</h3>
-                                    <div class="member-role">Science Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Pushkar Kumar </h3>
-                                    <div class="member-role">Science Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Chaitanya Kumar Maurya </h3>
-                                    <div class="member-role">Science Member</div>
-                            </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Ansh Rohilla </h3>
-                                    <div class="member-role">Science Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Saurabh Kharmale</h3>
-                                    <div class="member-role">Science Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Priyal Shah</h3>
-                                    <div class="member-role">Science Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-
-                </div>
-            </div>
-            <!-- a -->
-
-            <div class="role-section">
-                <h2 class="event-title" style="text-align: center;">Social Media</h2>
-                <div class="cards-container">
                     <div class="member-card">
                         <div class="image-container">
-                            <img src="https://i.postimg.cc/m2J3Ck6s/socialmedia.jpg" alt="" class="member-image">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
                         </div>
                         <div class="member-info">
                             <div>
-                                <h3 class="member-name">Shlok Khairnar</h3>
-                                <div class="member-role">Social Team Lead</div>
+                                <h3 class="member-name">Samarth Kedar</h3>
+                                <div class="member-role">Management Member</div>
                                 <div class="social-links">
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
 
@@ -896,116 +597,434 @@
                         </div>
                     </div>
 
-                    <!-- <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Ayush pasekar</h3>
-                                    <div class="member-role">Social Team Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Sohan kankal</h3>
-                                    <div class="member-role">Social Team Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="https://i.postimg.cc/wjNdb4nW/dharunimg.jpg" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Dharun Dogra</h3>
-                                    <div class="member-role">Social Team Member</div>
-                                    <div class="social-links">
-                                        <a href="https://www.linkedin.com/in/dharun-dogra-5b3668336/"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="image-container">
-                                <img src="/api/placeholder/200/200" alt="" class="member-image">
-                            </div>
-                            <div class="member-info">
-                                <div>
-                                    <h3 class="member-name">Devanshu Misal</h3>
-                                    <div class="member-role">Social Team Member</div>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                </div>
-            </div>
-            <!-- a -->
-            <div class="role-section">
-                <h2 class="event-title" style="text-align: center;">Website Team</h2>
-                <div class="cards-container">
                     <div class="member-card">
                         <div class="image-container">
-                            <img src="https://i.postimg.cc/15HWRGw9/aditya3-img.jpg" alt="" class="member-image">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
                         </div>
                         <div class="member-info">
                             <div>
-                                <h3 class="member-name">Aditya Raut</h3>
-                                <div class="member-role">Website & UI/UX Developer</div>
+                                <h3 class="member-name">Soham gandhi </h3>
+                                <div class="member-role">Management Member</div>
                                 <div class="social-links">
-                                    <a href="https://www.linkedin.com/in/aditya-raut-3b4bba31b/"><i
-                                            class="fa-brands fa-linkedin"></i></a>
-                                    <a href="https://github.com/rautaditya2606"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Arjun Deshmukh </h3>
+                                <div class="member-role">Management Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Nandini khanwani</h3>
+                                <div class="member-role">Management Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Satyam Sanjay karle</h3>
+                                <div class="member-role">Management Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Saidhanti Mendhe </h3>
+                                <div class="member-role">Management Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Siddhi Gawali </h3>
+                                <div class="member-role">Management Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+        <!-- a -->
+
+        <div class="role-section">
+            <h2 class="event-title" style="text-align: center;">Promotion </h2>
+            <div class="cards-container">
+                <div class="member-card">
+                    <div class="image-container">
+                        <img src="https://i.postimg.cc/kGdTHF3B/1000061277-removebg-preview.png" alt=""
+                            class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div>
+                            <h3 class="member-name">Sanskriti Khamkar</h3>
+                            <div class="member-role">Promotion Lead</div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Ayana Srivastava </h3>
+                                <div class="member-role">Promotion Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Abhinav Kumar</h3>
+                                <div class="member-role">Promotion Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+        <!-- a -->
+
+        <div class="role-section">
+            <h2 class="event-title" style="text-align: center;">Science</h2>
+            <div class="cards-container">
+                <div class="member-card">
+                    <div class="image-container">
+                        <img src="https://i.postimg.cc/wjYy9mG7/aryanmishra.jpg" alt="" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div>
+                            <h3 class="member-name">Aryan Mishra</h3>
+                            <div class="member-role">Science Lead</div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Rishav Pandey</h3>
+                                <div class="member-role">Science Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Sarthak Choudhari </h3>
+                                <div class="member-role">Science Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Shreyash Homkar</h3>
+                                <div class="member-role">Science Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Pushkar Kumar </h3>
+                                <div class="member-role">Science Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Chaitanya Kumar Maurya </h3>
+                                <div class="member-role">Science Member</div>
+                        </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Ansh Rohilla </h3>
+                                <div class="member-role">Science Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Saurabh Kharmale</h3>
+                                <div class="member-role">Science Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Priyal Shah</h3>
+                                <div class="member-role">Science Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+            </div>
+        </div>
+        <!-- a -->
+
+        <div class="role-section">
+            <h2 class="event-title" style="text-align: center;">Social Media</h2>
+            <div class="cards-container">
+                <div class="member-card">
+                    <div class="image-container">
+                        <img src="https://i.postimg.cc/m2J3Ck6s/socialmedia.jpg" alt="" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div>
+                            <h3 class="member-name">Shlok Khairnar</h3>
+                            <div class="member-role">Social Media Lead</div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Ayush pasekar</h3>
+                                <div class="member-role">Social Team Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Sohan kankal</h3>
+                                <div class="member-role">Social Team Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="image-container">
+                            <img src="https://i.postimg.cc/wjNdb4nW/dharunimg.jpg" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Dharun Dogra</h3>
+                                <div class="member-role">Social Team Member</div>
+                                <div class="social-links">
+                                    <a href="https://www.linkedin.com/in/dharun-dogra-5b3668336/"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="image-container">
+                            <img src="/api/placeholder/200/200" alt="" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div>
+                                <h3 class="member-name">Devanshu Misal</h3>
+                                <div class="member-role">Social Team Member</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+        <!-- a -->
+        <div class="role-section">
+            <h2 class="event-title" style="text-align: center;">Website Team</h2>
+            <div class="cards-container">
+                <div class="member-card">
+                    <div class="image-container">
+                        <img src="https://i.postimg.cc/15HWRGw9/aditya3-img.jpg" alt="" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div>
+                            <h3 class="member-name">Aditya Raut</h3>
+                            <div class="member-role">Website & UI/UX Developer</div>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/aditya-raut-3b4bba31b/"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/rautaditya2606"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- </section> -->
+        <!-- </section> -->
 
-            <!-- Replace all social link text with icons -->
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    const socialLinks = document.querySelectorAll('.social-links');
-                    socialLinks.forEach(container => {
-                        const links = container.querySelectorAll('a');
-                        links.forEach(link => {
-                            if (link.textContent.includes('LinkedIn')) {
-                                link.innerHTML = '<i class="fab fa-linkedin"></i>';
-                                link.setAttribute('title', 'LinkedIn Profile');
-                            }
-                            if (link.textContent.includes('GitHub')) {
-                                link.innerHTML = '<i class="fab fa-github"></i>';
-                                link.setAttribute('title', 'GitHub Profile');
-                            }
-                        });
+        <!-- Replace all social link text with icons -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const socialLinks = document.querySelectorAll('.social-links');
+                socialLinks.forEach(container => {
+                    const links = container.querySelectorAll('a');
+                    links.forEach(link => {
+                        if (link.textContent.includes('LinkedIn')) {
+                            link.innerHTML = '<i class="fab fa-linkedin"></i>';
+                            link.setAttribute('title', 'LinkedIn Profile');
+                        }
+                        if (link.textContent.includes('GitHub')) {
+                            link.innerHTML = '<i class="fab fa-github"></i>';
+                            link.setAttribute('title', 'GitHub Profile');
+                        }
                     });
                 });
-            </script>
+            });
+        </script>
 
 
-            <!-- Add Font Awesome for social icons -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <!-- Add Font Awesome for social icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
